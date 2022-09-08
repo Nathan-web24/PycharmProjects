@@ -37,7 +37,8 @@ import os
 from art import logo
 
 def clear():
-  os.system('clear')
+  os.system('cls' if os.name == 'nt' else 'clear')
+  
 def deal_card():
   """Returns a random card from the deck."""
   cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
